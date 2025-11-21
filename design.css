@@ -388,6 +388,50 @@ body {
   .offer-media{ height: 160px; }
   .cta{ padding: 12px 20px; font-size: .98rem; }
 }
+/* MOBILE MENU */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* When screen becomes small */
+@media (max-width: 980px) {
+  
+  .menu-icon {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(255,255,255,0.95);
+    padding: 15px;
+    border-radius: 10px;
+    gap: 12px;
+    width: 160px;
+  }
+
+  .links a {
+    color: #9b2edc;
+    font-weight: 700;
+  }
+
+  /* When checkbox is clicked → show menu */
+  #menu-toggle:checked + .menu-icon + .links {
+    display: flex;
+  }
+}
+
 
    
 
